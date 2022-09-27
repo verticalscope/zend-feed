@@ -159,7 +159,7 @@ class Feed extends AbstractFeed implements Iterator, Countable
      *
      * @return int
      */
-    public function count()
+    public function count():int
     {
         return count($this->entries);
     }
@@ -189,7 +189,7 @@ class Feed extends AbstractFeed implements Iterator, Countable
      *
      * @return void
      */
-    public function next()
+    public function next():void
     {
         ++$this->entriesKey;
     }
@@ -199,7 +199,7 @@ class Feed extends AbstractFeed implements Iterator, Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind():void
     {
         $this->entriesKey = 0;
     }
@@ -209,7 +209,7 @@ class Feed extends AbstractFeed implements Iterator, Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid():bool
     {
         return 0 <= $this->entriesKey && $this->entriesKey < $this->count();
     }
