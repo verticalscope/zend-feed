@@ -169,7 +169,7 @@ class Feed extends AbstractFeed implements Iterator, Countable
      *
      * @return Entry
      */
-    public function current()
+    public function current():mixed
     {
         return $this->entries[$this->key()];
     }
